@@ -23,12 +23,12 @@ function Header() {
                 <img src="https://iconape.com/wp-content/files/yd/117914/svg/Facebook_f_logo__2019_.svg" alt="" />
                 <div className="header__input">
                     <SearchIcon />
-                    <input type="text" />
+                    <input placeholder="Search Facebook" type="text" />
 
                 </div>
                 </div>
                 <div className="header__center">
-                    <div className="header__option">
+                    <div className="header__option header__option--active">
                         <HomeIcon fontsize="large" />
 
                     </div>
