@@ -9,11 +9,16 @@ import PeopleIcon from "@material-ui/icons/People";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import  VideoLibraryIcon  from '@material-ui/icons/VideoLibrary';
 import ChatIcon from "@material-ui/icons/Chat";
+import { useStateValue } from "./StateProvider"; 
+
 
 function Sidebar() {
+    const [{ user }, dispatch] = useStateValue();
+
+
     return (
         <div className="sidebar" >
-            <SidebarRow src="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png " title="Ulemkamba" />
+            <SidebarRow src={ user.photoURL} title={user.displayName} />
             <SidebarRow Icon={LocalHospitalIcon} title="COVID-19 Information" />
             <SidebarRow Icon={EmojiFlagsIcon} title="Pages"/>
             <SidebarRow Icon={PeopleIcon} title="Friends" />
